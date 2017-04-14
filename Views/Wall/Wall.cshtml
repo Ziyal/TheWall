@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Wall";
+}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="top-bar">
+            <h2 class="welcome">Welcome to the Wall</h2>
+            <h5 class="user">Welcome, @ViewBag.User[0]["first_name"]</h5>
+        </div>
+
+        <div class="message_form">
+            <h3 class="post-message">Post a Message</h3>
+            <form action="post_message" method="post">
+                <textarea rows="5" cols="70" name="message" class="form-control"></textarea><br>
+                <input class="btn btn-primary btn-sm " type="submit" value="Post a Message">
+            </form>
+        </div>
+        <hr>
+
+                @{
+                if (ViewBag.Errors != null) {
+                    foreach(var error in ViewBag.Errors) {
+                        <p>@error</p>
+                    }
+                }
+            }
+        <div class="all_message">
+        @{
+            foreach(var message in ViewBag.AllMessages) {
+
+            <div class="single_message">
+                <br>
+                <b>@message["message_author"]</b>
+                <i>@message["created_at"].ToString("ddd, MMM d, yyyy h:m tt")</i>
+
+                <p class="message">@message["message"]</p>
+
+
+            @{
+                if(@message["user_id"] == @ViewBag.User[0]["id"]) {
+                    <form action="delete_post/@message["id"]" method="post">
+                        <input class="btn btn-warning btn-xs" type="submit" value="Delete Post">
+                    </form>
+                }
+            }
+
+
+            @{
+                foreach(var comment in ViewBag.AllComments) {
+                    <br>
+                    if(@comment["message_id"] == @message["id"]) {
+                        <div class="comment-container col-sm-offset-1">
+                            <b class="comment-author">@comment["comment_author"]</b>
+                            <i class="comment-date">@comment["created_at"].ToString("ddd, MMM d, yyyy h:m tt")</i>
+                            <p class="comment">@comment["comment"]</p>
+                        </div>
+                    }
+
+                    
+                }
+            }
+            
+
+                <div class="comment_form col-sm-offset-1">
+                    <h4 class="comment-title">Post a Comment</h4>
+                    <form action="post_comment/@message["id"]" method="post">
+                        <textarea rows="2" cols="20" name="comment" class="form-control"></textarea><br>
+                        <input class="btn btn-default btn-sm" type="submit" value="Post a Comment">
+                    </form>
+                </div>
+                <hr>
+            </div>
+            
+            }
+        }
+        </div>
+    </div>
+  </body>
+</html>

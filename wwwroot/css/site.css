@@ -1,0 +1,84 @@
+body {
+    background-color: #ededed;
+}
+
+.container {
+    background-color: white;
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+    padding-right: 60px;
+    padding-left: 35px;
+}
+
+.top-bar {
+    width: 500px;
+    display: inline-block;
+}
+
+.welcome {
+    text-align: left;
+    width: 300px;
+    margin: 20px 10px 20px 0px ;
+}
+
+.user {
+    width: 150px;
+    display: block;
+    vertical-align: top;
+    margin-right: 0px;
+    text-align: left;
+    font-style: italic;
+}
+
+.message {
+    font-size: 18px;
+}
+
+.comment-author {
+    color: #5b5b5b;
+}
+
+.comment-date {
+    color: #5b5b5b;
+}
+.comment {
+    color: #5b5b5b;
+}
+
+.comment-title {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.post-message {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.login-btn {
+    margin-top: 15px;
+}
+
+.login {
+    display: inline-block;
+    widows: 150px;
+    vertical-align: top;
+    padding: 10px;
+    padding-right: 70px;
+}
+
+.register {
+    display: inline-block;
+    widows: 150px;
+    padding: 10px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-titles {
+    font-weight: 12px;
+}
