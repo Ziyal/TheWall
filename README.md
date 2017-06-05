@@ -10,5 +10,5 @@ __Built With:__
   * Boostrap
   * HTML/CSS
 
-![Wall](https://github.com/Ziyal/TheWall/blob/master/screenshots/wall1.jpg "Wall Screenshot")
-![Wall](https://github.com/Ziyal/TheWall/blob/master/screenshots/wall2.jpg "Wall Screenshot")
+![Wall](https://github.com/Ziyal/TheWall/blob/master/screenshots/wall1.png "Wall Screenshot")
+![Wall](https://github.com/Ziyal/TheWall/blob/master/screenshots/wall2.png "Wall Screenshot")
