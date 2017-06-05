@@ -1,28 +1,54 @@
 body {
-    background-color: #ededed;
-}
+    /*background-color: #ededed;*/
+background-color:#ddedd0;
+	background-image: radial-gradient(#fff 10%, transparent 10%),
+	radial-gradient(#fff 10%, transparent 10%);
+	background-size: 60px 60px;
+	background-position: 0 0, 30px 30px;}
 
 .container {
     background-color: white;
+    border: 1px dashed #ddd;
+    margin: 20px 0px 20px 0px;
     width: 600px;
     display: block;
     margin: 0 auto;
-    padding-right: 60px;
-    padding-left: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 25px;
 }
+
+.main_title {
+    font-family: 'Pacifico', cursive;
+    /*display: inline-block;*/
+    text-align: center;
+    margin: 20px 10px 20px 0px ;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
 
 .top-bar {
     width: 500px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 .welcome {
+    font-family: 'Pacifico', cursive;
+    display: inline-block;
     text-align: left;
-    width: 300px;
     margin: 20px 10px 20px 0px ;
 }
 
 .user {
+    display: inline-block;
     width: 150px;
     display: block;
     vertical-align: top;
@@ -32,6 +58,11 @@ body {
 }
 
 .message {
+    font-size: 18px;
+}
+
+.author {
+    font-family: 'Pacifico', cursive;
     font-size: 18px;
 }
 
@@ -46,15 +77,10 @@ body {
     color: #5b5b5b;
 }
 
-.comment-title {
-    font-weight: bolder;
-    font-size: 14px;
+.comment_form {
+    width: 300px;
 }
 
-.post-message {
-    font-weight: bolder;
-    font-size: 18px;
-}
 
 .login-btn {
     margin-top: 15px;
@@ -81,4 +107,7 @@ h1 {
 
 .form-titles {
     font-weight: 12px;
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
+
